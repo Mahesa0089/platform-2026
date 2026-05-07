@@ -1,0 +1,100 @@
+# 🧱 PRODUCT REQUIREMENT DOCUMENT (PRD)
+## SmartSchool Web System
+
+---
+
+## 1. Deskripsi Produk
+
+| Atribut | Detail |
+|---|---|
+| **Nama Produk** | SmartSchool Web System |
+| **Platform** | Web-based (desktop & mobile responsive) |
+| **Bidang** | Ilmu Komputer / Pendidikan |
+| **Tujuan Utama** | Mempermudah pengelolaan data akademik sekolah dari TK hingga SMA. |
+
+---
+
+## 2. Target Pengguna
+
+| Pengguna | Kebutuhan |
+|---|---|
+| **Guru** | Mengelola nilai, absensi, dan kegiatan belajar. |
+| **Siswa** | Melihat jadwal, nilai, tugas, dan absensi. |
+| **Orang Tua** | Memantau perkembangan anak. |
+| **Admin Akademik** | Mengelola data user, jadwal, kelas, dan laporan. |
+
+---
+
+## 3. Fitur Utama
+
+### a. Modul Data Master
+- Data guru, siswa, dan kelas.
+- Manajemen mata pelajaran dan tahun ajaran.
+
+### b. Modul Akademik
+- Input nilai dan rapor otomatis.
+- Absensi harian siswa dan guru.
+- Jadwal pelajaran terintegrasi.
+
+### c. Modul Komunikasi
+- Pengumuman umum sekolah.
+- Pesan atau notifikasi untuk orang tua dan siswa.
+
+### d. Modul Pelaporan
+- Laporan nilai per siswa dan per kelas.
+- Statistik absensi dan kehadiran.
+- Dashboard akademik untuk kepala sekolah.
+
+### e. Modul Akses
+- Login multi-user dengan level akses (Admin, Guru, Siswa, Orang Tua).
+- Reset password dan manajemen keamanan.
+
+---
+
+## 4. Persyaratan Teknis
+
+| Komponen | Teknologi |
+|---|---|
+| **Frontend** | HTML5, CSS3, JavaScript (React / Vue) |
+| **Backend** | Node.js / Laravel / Django |
+| **Database** | MySQL / PostgreSQL |
+| **Server** | Cloud (AWS / Google Cloud / VPS) |
+| **Keamanan** | SSL, enkripsi data pengguna, autentikasi token JWT |
+
+---
+
+## 5. Non-Functional Requirements
+
+| Aspek | Standar |
+|---|---|
+| **Keamanan Data** | Data terenkripsi dan sesuai standar privasi pendidikan. |
+| **Kinerja** | Respon cepat (<2 detik per transaksi umum). |
+| **Reliabilitas** | Minimal 99% uptime per bulan. |
+| **Skalabilitas** | Dapat menampung 1.000+ pengguna aktif sekaligus. |
+
+---
+
+## 6. User Flow
+
+```
+Login User
+    │
+    ▼
+[Role Detection]
+    │
+    ├── Admin Akademik  ──► Kelola Data Akademik ──► Dashboard Laporan
+    │
+    ├── Guru            ──► Input Nilai & Absensi ──► Dashboard Laporan
+    │
+    ├── Siswa           ──► Lihat Nilai dan Jadwal
+    │
+    └── Orang Tua       ──► Pantau Kemajuan Anak
+```
+
+---
+
+## 7. Indikator Keberhasilan Produk
+
+- Semua stakeholder dapat menggunakan sistem tanpa pelatihan rumit.
+- Data akademik dapat diproses otomatis tanpa kesalahan manual.
+- Pengiriman laporan siswa ke orang tua dilakukan otomatis dan tepat waktu.
